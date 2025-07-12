@@ -1,10 +1,9 @@
 print("Welcome to the Quiz Game!")
 player_name = input("Please enter your name: ")
-print(f"
-Hello, {player_name}! Let's start the quiz.
-You will be asked 5 questions. Try to answer them correctly
-For each correct answer, you will earn 10 points.
-WOULD YOU LIKE TO START? (yes/no)")
+print(f"Hello, {player_name}! Let's start the quiz.)
+Print("You will be asked 5 questions. Try to answer them correctly")
+Print("For each correct answer, you will earn 10 points.")
+Print("WOULD YOU LIKE TO START? (yes/no)")
 
 PLAYING =input("Do you want to play? ")
 if PLAYING != "yes":
