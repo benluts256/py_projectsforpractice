@@ -4,11 +4,8 @@ import sqlite3
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import hashlib
-# ======================================================
+
 # SECTION 1: DATABASE LOGIC
-# ======================================================
-
-
 
 def init_db():
     """Initializes the database and creates the tables if they don't exist."""
@@ -83,9 +80,8 @@ def get_recent_transactions():
     return data
 
 
-# ======================================================
 # SECTION 2: GUI APPLICATION
-# ======================================================
+
 
 class LoginWindow:
     def __init__(self, root):
@@ -292,19 +288,17 @@ class FinanceApp:
         rows = get_recent_transactions()
         for row in rows:
             self.tree.insert("", tk.END, values=row)
-
-# ======================================================
+            
 # SECTION 3: MAIN EXECUTION
-# ======================================================
-
 
 if __name__ == "__main__":
     init_db()
     
-    # 1. Start with the Login Screen
+    # 1.  Login Screen
     login_root = tk.Tk()
     LoginWindow(login_root)
     login_root.mainloop()
     main_root = tk.Tk()
     app = FinanceApp(main_root)
+
     main_root.mainloop()
