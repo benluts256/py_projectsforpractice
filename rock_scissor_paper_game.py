@@ -31,6 +31,6 @@ while True:
         print("You win!")
         user_wins += 1
     else:
-        print("You lose!")
+        print("You lose niga!")
         computer_wins += 1
         
